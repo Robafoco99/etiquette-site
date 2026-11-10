@@ -341,5 +341,11 @@ window.DS_I18N.fr = {
   "game.s.aboveTop": "au-dessus de l’assiette, en haut",
   "game.s.aboveBottom": "au-dessus de l’assiette, en dessous",
   "game.s.wineA": "à droite de l’eau",
-  "game.s.wineB": "en haut, tout à droite"
+  "game.s.wineB": "en haut, tout à droite",
+  "car.img.intro": "Illustration sépia façon gravure d’un gentilhomme du XIXe siècle, col haut et lavallière.",
+  "car.img.introCap": "Illustration dans le style d’une gravure du XIXe siècle ; ce n’est pas un portrait de Carreño.",
+  "car.img.g1": "Gravure sépia d’un dîner formel du XIXe siècle : des invités assis à une longue table pendant que l’hôte, debout, prend la parole.",
+  "car.img.g2": "Gravure sépia d’une table dressée : assiette, fourchettes à gauche, couteaux et cuillères à droite, verres et petit pain au-dessus.",
+  "car.img.g3": "Gravure sépia d’un convive s’adressant avec courtoisie à un serveur portant un plat couvert.",
+  "car.img.g4": "Gravure sépia d’invités discutant chaleureusement autour d’une table."
 };

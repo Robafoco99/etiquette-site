@@ -340,5 +340,11 @@ window.DS_I18N['es-419'] = {
   "game.s.aboveTop": "arriba del plato, primera fila",
   "game.s.aboveBottom": "arriba del plato, segunda fila",
   "game.s.wineA": "a la derecha del agua",
-  "game.s.wineB": "arriba, en el extremo derecho"
+  "game.s.wineB": "arriba, en el extremo derecho",
+  "car.img.intro": "Ilustración en sepia, estilo grabado, de un caballero del siglo XIX con cuello alto y corbatín.",
+  "car.img.introCap": "Ilustración en estilo de grabado del siglo XIX; no es un retrato de Carreño.",
+  "car.img.g1": "Grabado en sepia de una cena formal del siglo XIX: invitados sentados a una mesa larga mientras el anfitrión, de pie, toma la palabra.",
+  "car.img.g2": "Grabado en sepia de una mesa servida: plato, tenedores a la izquierda, cuchillos y cucharas a la derecha, copas y pan arriba.",
+  "car.img.g3": "Grabado en sepia de un comensal que habla con cortesía a un mesero que lleva un plato cubierto.",
+  "car.img.g4": "Grabado en sepia de invitados conversando con calidez alrededor de una mesa."
 };

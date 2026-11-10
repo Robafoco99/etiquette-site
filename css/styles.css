@@ -707,3 +707,20 @@ a:hover { color: var(--wine); }
    (which creates a containing block) never moves its pieces or pins. */
 .scene .part { position: absolute; inset: 0; pointer-events: none; }
 .scene .part > * { pointer-events: auto; }
+
+/* Carreño's Classic: intro illustration and category images */
+.car-intro { display: grid; gap: var(--s5); align-items: center; max-width: 920px; margin: var(--s4) auto 0; text-align: left; }
+.car-intro .lede { margin: 0 0 var(--s4); max-width: none; }
+.car-intro .note { margin: 0; max-width: none; }
+.car-figure { margin: 0; justify-self: center; width: 100%; max-width: 250px; }
+.car-figure img, .theme-img img {
+  display: block; width: 100%; height: auto; max-width: 100%;
+  border-radius: var(--radius); border: 1px solid var(--gold-soft); box-shadow: var(--shadow); background: var(--sepia);
+}
+.car-figure figcaption { margin-top: var(--s2); font-size: .8rem; font-style: italic; line-height: 1.4; color: var(--muted); text-align: center; }
+@media (min-width: 900px) {
+  .car-intro { grid-template-columns: minmax(0, 1fr) 280px; gap: var(--s7); }
+  .car-figure { max-width: 280px; }
+}
+.theme-img { margin: 0 0 var(--s5); max-width: 440px; }
+.theme-img img { aspect-ratio: 7 / 5; object-fit: cover; }

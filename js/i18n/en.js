@@ -334,5 +334,11 @@ window.DS_I18N.en = {
   "game.s.aboveTop": "above the plate, top",
   "game.s.aboveBottom": "above the plate, below",
   "game.s.wineA": "right of the water",
-  "game.s.wineB": "far upper right"
+  "game.s.wineB": "far upper right",
+  "car.img.intro": "Sepia engraving-style illustration of a 19th-century gentleman in a high collar and cravat.",
+  "car.img.introCap": "Illustration in a 19th-century engraving style; not a portrait of Carreño.",
+  "car.img.g1": "Sepia engraving of a 19th-century formal dinner: guests seated at a long table while the host stands to speak.",
+  "car.img.g2": "Sepia engraving of a set table: plate, forks on the left, knives and spoons on the right, glasses and a bread roll above.",
+  "car.img.g3": "Sepia engraving of a diner speaking courteously to a waiter who carries a covered dish.",
+  "car.img.g4": "Sepia engraving of guests chatting warmly around a dinner table."
 };

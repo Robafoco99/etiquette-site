@@ -50,5 +50,6 @@ window.DS_I18N['es-ES'] = Object.assign({}, window.DS_I18N['es-419'], {
   "game.lunchNote": "Comida de negocios: 9 piezas. El plato de pan, el cuchillo de mantequilla y el tenedor de postre son opcionales.",
   "game.p.salad.hintLunch": "En esta comida la ensalada va primero, así que su tenedor va en el extremo izquierdo.",
   "game.p.fork.ok": "¡Correcto! El tenedor principal espera a la izquierda.",
-  "table.count.intro": "<strong>¿Cuántas piezas?</strong> Depende del menú. Esta mesa formal lleva 10 cubiertos: 8 antes del postre, más una cuchara y un tenedor de postre que pueden llegar con el postre. El diagrama de Emily Post añade un cuchillo de ensalada. Una comida de negocios necesita 5 básicos (dos tenedores, un cuchillo, dos cucharas), más extras opcionales."
+  "table.count.intro": "<strong>¿Cuántas piezas?</strong> Depende del menú. Esta mesa formal lleva 10 cubiertos: 8 antes del postre, más una cuchara y un tenedor de postre que pueden llegar con el postre. El diagrama de Emily Post añade un cuchillo de ensalada. Una comida de negocios necesita 5 básicos (dos tenedores, un cuchillo, dos cucharas), más extras opcionales.",
+  "car.img.g3": "Grabado en sepia de un comensal que habla con cortesía a un camarero que lleva un plato cubierto."
 });
