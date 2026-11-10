@@ -341,10 +341,11 @@ window.DS_I18N['pt-BR'] = {
   "game.s.aboveBottom": "acima do prato, embaixo",
   "game.s.wineA": "à direita da água",
   "game.s.wineB": "no alto, na ponta direita",
-  "car.img.intro": "Ilustração em sépia, no estilo de gravura, de um cavalheiro do século XIX de colarinho alto e gravata.",
-  "car.img.introCap": "Ilustração no estilo de gravura do século XIX; não é um retrato de Carreño.",
+  "car.img.intro": "Retrato gravado em sépia de Manuel Antonio Carreño, sentado, de casaca escura e gravata-borboleta.",
+  "car.img.introCap": "Manuel Antonio Carreño (1812–1874). Imagem: Wikimedia Commons, domínio público.",
   "car.img.g1": "Gravura em sépia de um jantar formal do século XIX: convidados sentados a uma mesa comprida enquanto o anfitrião, de pé, fala.",
   "car.img.g2": "Gravura em sépia de uma mesa posta: prato, garfos à esquerda, facas e colheres à direita, taças e pão acima.",
   "car.img.g3": "Gravura em sépia de um cliente falando com gentileza a um garçom que traz um prato coberto.",
-  "car.img.g4": "Gravura em sépia de convidados conversando animadamente ao redor de uma mesa."
+  "car.img.g4": "Gravura em sépia de convidados conversando animadamente ao redor de uma mesa.",
+  "refs.portrait": "Imagem usada na página O clássico de Carreño, recortada para este site."
 };

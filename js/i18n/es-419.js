@@ -341,10 +341,11 @@ window.DS_I18N['es-419'] = {
   "game.s.aboveBottom": "arriba del plato, segunda fila",
   "game.s.wineA": "a la derecha del agua",
   "game.s.wineB": "arriba, en el extremo derecho",
-  "car.img.intro": "Ilustración en sepia, estilo grabado, de un caballero del siglo XIX con cuello alto y corbatín.",
-  "car.img.introCap": "Ilustración en estilo de grabado del siglo XIX; no es un retrato de Carreño.",
+  "car.img.intro": "Retrato grabado en sepia de Manuel Antonio Carreño, sentado, con levita oscura y corbatín.",
+  "car.img.introCap": "Manuel Antonio Carreño (1812–1874). Imagen: Wikimedia Commons, dominio público.",
   "car.img.g1": "Grabado en sepia de una cena formal del siglo XIX: invitados sentados a una mesa larga mientras el anfitrión, de pie, toma la palabra.",
   "car.img.g2": "Grabado en sepia de una mesa servida: plato, tenedores a la izquierda, cuchillos y cucharas a la derecha, copas y pan arriba.",
   "car.img.g3": "Grabado en sepia de un comensal que habla con cortesía a un mesero que lleva un plato cubierto.",
-  "car.img.g4": "Grabado en sepia de invitados conversando con calidez alrededor de una mesa."
+  "car.img.g4": "Grabado en sepia de invitados conversando con calidez alrededor de una mesa.",
+  "refs.portrait": "Imagen usada en la página El clásico de Carreño, recortada para este sitio."
 };
