@@ -618,3 +618,92 @@ a:hover { color: var(--wine); }
 .qlist summary { cursor: pointer; min-height: 48px; display: flex; align-items: center; font-family: var(--serif); font-size: 1.4rem; font-weight: 600; color: var(--wine); }
 .qlist ol { padding-left: 1.4em; margin: var(--s2) 0 var(--s4); }
 .qlist li { margin-bottom: var(--s2); }
+
+/* =========================================================
+   Final polish: illustrator's pieces at one real-world scale
+   Scene = 2100 × 1310 source px (2.5 px per unit). Every piece
+   keeps its own width/height; the whole table scales together.
+   ========================================================= */
+.scene, .board { --W: 2100; --H: 1310; }
+.scene { position: relative; width: 100%; aspect-ratio: 2100 / 1310; background: #F9ECEC; border: 1px solid var(--gold); border-radius: 22px; }
+.tp {
+  position: absolute; display: block; max-width: none;
+  left: calc(var(--x) / var(--W) * 100%); top: calc(var(--y) / var(--H) * 100%);
+  width: calc(var(--w) / var(--W) * 100%); height: calc(var(--h) / var(--H) * 100%);
+  transform: rotate(var(--r, 0deg)); user-select: none; -webkit-user-select: none;
+}
+.scene .pin {
+  position: absolute; z-index: 3;
+  left: calc(var(--px) / var(--W) * 100%); top: calc(var(--py) / var(--H) * 100%);
+  transform: translate(-50%, -50%);
+  width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--gold); color: var(--wine-deep); font: 700 .8rem/1 var(--sans);
+  box-shadow: 0 0 0 2px var(--paper);
+}
+@media (max-width: 600px) { .scene .pin { width: 21px; height: 21px; font-size: .68rem; } }
+.setting-art .part { transition: filter .2s; }
+.setting-art .part.is-hl { filter: drop-shadow(0 0 6px rgba(194, 160, 106, .95)); }
+.setting-art .part.is-hl .pin { background: var(--wine); color: var(--ivory); }
+
+/* Game board: keeps a minimum scale so every spot has a ≥44px touch area;
+   on narrow screens the frame scrolls sideways instead of shrinking the pieces. */
+.game { max-width: 980px; }
+.board-scroll { overflow-x: auto; border-radius: var(--radius); box-shadow: var(--shadow); -webkit-overflow-scrolling: touch; }
+.board {
+  --piece-min-scale: .45;
+  width: max(100%, calc(var(--W) * var(--piece-min-scale) * 1px));
+  aspect-ratio: 2100 / 1310; border: 0; border-radius: var(--radius); box-shadow: none; overflow: hidden;
+}
+.placed-layer { position: absolute; inset: 0; pointer-events: none; }
+.board .tp { z-index: 1; pointer-events: none; }
+.board .tp.is-under { z-index: 0; }
+.board .tp.just-placed { animation: snapIn .32s var(--ease); }
+@keyframes snapIn {
+  0% { transform: rotate(var(--r, 0deg)) scale(.92); }
+  60% { transform: rotate(var(--r, 0deg)) scale(1.04); }
+  100% { transform: rotate(var(--r, 0deg)) scale(1); }
+}
+.slot { z-index: 2; border-width: 1.5px; }
+.slot.is-filled { pointer-events: none; }
+
+/* Tray: same proportions, smaller tray scale */
+.tray, .tray { --tray-scale: .13; flex-wrap: wrap; overflow: visible; justify-content: center; }
+@media (max-width: 640px) { .tray { flex-wrap: wrap; overflow: visible; --tray-scale: .11; } }
+.piece {
+  width: auto; min-width: 84px; max-width: 120px; min-height: 44px; padding: var(--s2);
+  touch-action: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; cursor: grab;
+}
+.piece-fig { display: flex; align-items: center; justify-content: center; height: calc(690 * var(--tray-scale) * 1px); }
+.piece-img {
+  width: calc(var(--w) * var(--tray-scale) * 1px); height: calc(var(--h) * var(--tray-scale) * 1px);
+  max-width: none; pointer-events: none;
+}
+.piece.is-dragging { opacity: .25; }
+
+/* The lifted piece while dragging (transform only; will-change only while it exists) */
+.drag-ghost {
+  position: fixed; left: 0; top: 0; z-index: 200; max-width: none;
+  pointer-events: none; will-change: transform; transform: none;
+  filter: drop-shadow(0 16px 18px rgba(110, 31, 53, .28));
+}
+
+/* Numbered citations: work without JS; popover on hover and keyboard focus */
+.cites { font: 700 .62em/1 var(--sans); margin-left: 3px; vertical-align: super; white-space: nowrap; }
+.cite-ref { position: relative; display: inline-block; min-width: 1.1em; padding: 0 1px; text-decoration: none; color: var(--gold-text); }
+.cite-ref:hover, .cite-ref:focus-visible { color: var(--wine); text-decoration: underline; }
+.cite-pop {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
+.cite-ref:hover .cite-pop, .cite-ref:focus-visible .cite-pop {
+  width: auto; height: auto; overflow: visible; clip-path: none;
+  left: 50%; bottom: calc(100% + 6px); transform: translateX(-50%); z-index: 20;
+  padding: 6px 10px; border-radius: 8px; background: var(--wine); color: var(--ivory);
+  font: 400 .8rem/1.3 var(--sans); letter-spacing: 0; box-shadow: var(--shadow-lift);
+}
+.region-legend { margin: var(--s3) 0 0; font-size: .85rem; color: var(--muted); }
+.refs li:target { border-color: var(--gold); box-shadow: 0 0 0 3px var(--blush); }
+
+/* Each numbered group covers the whole scene, so the highlight filter
+   (which creates a containing block) never moves its pieces or pins. */
+.scene .part { position: absolute; inset: 0; pointer-events: none; }
+.scene .part > * { pointer-events: auto; }

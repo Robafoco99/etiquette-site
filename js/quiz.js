@@ -159,6 +159,9 @@
     yes.addEventListener('click', function () {
       state.view = 'locked';
       wrap.remove();
+      // The answer key already lists every question, so the separate list is no longer needed.
+      var list = document.querySelector('.qlist');
+      if (list) list.remove();
       render('heading');
     });
   }
